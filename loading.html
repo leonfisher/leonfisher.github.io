@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta author="Leon Fisher">
+		<title>Loading</title>
+		<style>
+			body {font-family: Arial, sans-serif; color: #1976D2; line-height: 1.5; font-size: 14px; margin: 0;}
+			.container {display: flex; justify-content: center; align-items: center; min-height: 100vh;}
+			.box {display: flex; flex-direction: column; align-items: center;}
+			.message {margin: 40px 20px 0;}
+			.spinner-mat {animation: spin 2s linear infinite; transform-origin: center center;}
+			.spinner-mat .path {stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: mat-dash 1.5s ease-in-out infinite;}
+			@keyframes spin {
+				0% {transform: rotate3d(0, 0, 1, 0deg)}
+				25% {transform: rotate3d(0, 0, 1, 90deg)}
+				50% {transform: rotate3d(0, 0, 1, 180deg)}
+				75% {transform: rotate3d(0, 0, 1, 270deg)}
+				100% {transform: rotate3d(0, 0, 1, 359deg)}
+			}
+			@keyframes mat-dash {
+				0% {stroke-dasharray: 1, 200; stroke-dashoffset: 0}
+				50% {stroke-dasharray: 89, 200; stroke-dashoffset: -35px}
+				100% {stroke-dasharray: 89, 200; stroke-dashoffset: -124px}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box">
+				<svg class="spinner-mat" width="80" height="80" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="5" stroke-miterlimit="10"></circle></svg>
+				<div class="message">Loading...</div>
+			</div>
+		</div>
+	</body>
+</html>
