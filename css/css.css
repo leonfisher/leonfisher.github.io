@@ -3,3 +3,21 @@ body {margin: 0; font-family: Segoe UI, sans-serif; font-size: 20px; color: #666
 .box {display: flex; flex-direction: column; align-items: center;}
 .logo {margin-top: -40px;}
 .title {font-size: 40px; margin-bottom: 100px;}
+.loading {color: #1976D2;}
+.loading .message {margin: 40px 20px 0;}
+
+.spinner-mat {animation: spin 2s linear infinite; transform-origin: center center;}
+.spinner-mat .path {stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: mat-dash 1.5s ease-in-out infinite;}
+
+@keyframes spin {
+	0% {transform: rotate3d(0, 0, 1, 0deg)}
+	25% {transform: rotate3d(0, 0, 1, 90deg)}
+	50% {transform: rotate3d(0, 0, 1, 180deg)}
+	75% {transform: rotate3d(0, 0, 1, 270deg)}
+	100% {transform: rotate3d(0, 0, 1, 359deg)}
+}
+@keyframes mat-dash {
+	0% {stroke-dasharray: 1, 200; stroke-dashoffset: 0}
+	50% {stroke-dasharray: 89, 200; stroke-dashoffset: -35px}
+	100% {stroke-dasharray: 89, 200; stroke-dashoffset: -124px}
+}
