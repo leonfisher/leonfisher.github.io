@@ -1,10 +1,14 @@
-body {margin: 0; font-family: Segoe UI, sans-serif; font-size: 20px; color: #666;}
+body {margin: 0; font-family: Segoe UI, sans-serif; font-size: 20px; color: #666; background-color: #fff;}
 .container {display: flex; align-items: center; justify-content: center; min-height: 100vh;}
 .box {display: flex; flex-direction: column; align-items: center;}
 .logo {margin-top: -40px;}
 .title {font-size: 40px; margin-bottom: 100px;}
 .loading {color: #1976D2;}
 .loading .message {margin: 40px 20px 0;}
+
+@media (prefers-color-scheme: dark) {
+	body {color: #eee; background-color: #222;}
+}
 
 .spinner-mat {animation: spin 2s linear infinite; transform-origin: center center;}
 .spinner-mat .path {stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: mat-dash 1.5s ease-in-out infinite;}
